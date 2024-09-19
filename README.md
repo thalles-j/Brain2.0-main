@@ -1,8 +1,9 @@
-![image](https://github.com/user-attachments/assets/63663f5c-e0c5-48f2-b2ec-cadcbb34baca)
 
 # **Brain**
 
 O **Brain** é uma plataforma criada com o objetivo de conscientizar sobre a importância da saúde mental, fornecendo informações para que os usuários possam buscar o suporte profissional adequado. O site aborda temas como positividade tóxica, depressão, ansiedade, cyberbullying, entre outros, destacando como a tecnologia pode influenciar o bem-estar mental.
+
+![image](https://github.com/user-attachments/assets/63663f5c-e0c5-48f2-b2ec-cadcbb34baca)
 
 ## **Funcionalidades do Site**
 
