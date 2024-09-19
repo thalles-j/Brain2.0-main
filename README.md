@@ -7,10 +7,14 @@ O **Brain** é uma plataforma criada com o objetivo de conscientizar sobre a imp
 
 ## **Funcionalidades do Site**
 
-- Informações sobre saúde mental e tecnologia
-- Abordagem sobre positividade tóxica, depressão, ansiedade, cyberbullying
-- Incentivo à busca de ajuda profissional
-- Interface responsiva para desktop, tablet e celular
+- Informações sobre saúde mental e tecnologia.
+- Abordagem sobre positividade tóxica, depressão, ansiedade, cyberbullying e temas relacionados.
+- Incentivo à busca de ajuda profissional.
+- Interface responsiva para desktop, tablet e celular.
+
+## **Funcionalidades em Desenvolvimento do Site**
+- Comunidade para feedback com pessoas verificadas.
+- Desenvolver conteúdos para pagina principal.
 
 ## **Tecnologias Utilizadas**
 
