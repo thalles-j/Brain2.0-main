@@ -13,6 +13,8 @@
     --white: #fff;
 }
 
+@import 'animate.css';
+
 * {
     margin: 0;
     padding: 0;
@@ -30,7 +32,11 @@ button {
 
 main {
     padding-top: 7em;
-    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
 }
 
 .a-btn {
@@ -49,7 +55,7 @@ main {
     transform: scale(1.05);
 }
 
-.search-artigo {
+.search-prof {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,33 +64,34 @@ main {
     padding: 0.2em 3em;
     border: 1px solid var(--blue);
     border-radius: 0.8em;
+    margin-top: 1em
 }
 
-.search-artigo button {
+.search-prof button {
     background-color: transparent;
     padding: 0.4em 0.6em;
     border-radius: 0.7em;
     transition: 0.4s all ease;
 }
 
-.search-artigo button:nth-child(3) {
+.search-prof button:nth-child(3) {
     background-color: var(--green);
     color: var(--white);
 }
 
-.search-artigo button:hover {
+.search-prof button:hover {
     background-color: var(--green);
     color: white;
     border-radius: 1em;
 }
 
 @media(max-width:730px) {
-    .search-artigo{
+    .search-prof{
         min-width: 20em;
     }
 }
 
-.search-artigo #search {
+.search-prof #search {
     border: none;
     width: 50%;
     font-size: 16px;
@@ -92,12 +99,12 @@ main {
     height: 100%;
 }
 
-.search-artigo #search:focus {
+.search-prof #search:focus {
     border: none;
     outline: none;
 }
 
-.search-artigo #search::placeholder {
+.search-prof #search::placeholder {
     color: var(--grey);
 }
 
@@ -106,94 +113,87 @@ input:-webkit-autofill {
     -webkit-text-fill-color: inherit !important;
 }
 
-
-.artigos {
+.controls {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     padding: 0 1em;
 }
 
-.container-artigos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 2em;
-    margin: 1.5em 0;
+.controls h2 {
+    margin: 0;
 }
 
-.container-artigos h3 {
-    font-weight: 600;
+.city {
+    color: var(--green);
+    font-size: 1.6em;
+    height: 1em;
 }
 
-.container-artigos h3, p {
-    color: var(--black);
+.professionals {
+    padding: 1em 0 4em;
+    gap: 1.5em;
+    min-height: 60vh;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-.artigo-content {
+.professionals-container {
     padding: 1em 2em;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-.artigo-content-1 {
-    background-color: var(--green-010);
-}
-
-.artigo-content-2 {
-    background-color: var(--green-030);
-}
-
-.artigo-content-3 {
-    background-color: var(--green-020);
-}
-
-.red {
-    color: red;
-}
-
-.like-count {
-    padding-left: 0.4em;
-}
-
-
-.assets-artigo button {
-    background-color: transparent;
-    border: none;
-    padding: 0.5em;
+    width: 100%;
+    border-radius: 0.8em;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    background-color: rgb(249, 248, 248);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2em;
     position: relative;
 }
 
-.assets-artigo .bi.bi-heart-fill {
-    text-align: center;
+.professionals-container button {
+    position: absolute;
+    right: 2em;
+    bottom: 1em;
 }
 
-@media (max-width: 1400px) {
-    .container-artigos {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        gap: 2em;
-        margin: 2em 0;
-    }
+.professionals-container img {
+    max-width: 10em;
+    max-height: 10em;
 }
+
+.professionals-descrip {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 
 @media (max-width: 996px) {
-    .container-artigos {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(6, 1fr);
-        gap: 2em;
-        margin: 2em 0;
+    .professionals-container {
+        flex-direction: column;
+        gap: 1em;
     }
 }
 
-.hidden {
-    display: none;
+@media (max-width: 768px) {
+    .professionals-container button {
+        position: inherit;
+    }
+}
+
+.alert, .error{
+    font-size: 1.2em;
+    text-align: center;
+    color: var(--green);
 }
 
 .error {
-    font-size: 1.2em;
-    text-align: center;
     color: red;
 }

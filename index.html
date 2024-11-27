@@ -18,7 +18,11 @@
     <script src="js/contador.js" defer></script>
     <script src="js/curtida.js" defer></script>
     <script src="js/user.js" defer></script>
-    
+    <script src="js/profissional.js" defer></script>
+    <script src="js/mask.js" defer></script>
+    <script src="js/voluntariar.js" defer></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
     <title>Brain</title>
 </head>
@@ -42,10 +46,10 @@
             
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="index.html">Home</a></li>
-                <li><a class="dropdown-item" href="#intro">Profissionais</a></li>
+                <li><a class="dropdown-item" href="profissionais.html">Profissionais</a></li>
                 <li><a class="dropdown-item" href="artigos.html">Artigos</a></li>
-                <li><a class="dropdown-item" href="">Comunidade</a></li>
-                <li><a class="dropdown-item" href="">Biblioteca</a></li>
+                <li><a class="dropdown-item" href="comunidade.html">Comunidade</a></li>
+                <li><a class="dropdown-item" href="biblioteca.html">Biblioteca</a></li>
                 <li><a class="dropdown-item" href="dicas.html">Dicas</a></li>
             </ul>
         </div>
@@ -65,7 +69,7 @@
                                 emocional e ajudam a enfrentar os desafios do dia a dia.</p>
                             <a href="#termos" target="_self" class="a-btn">Termos de uso</a>
                         </div>
-                        <img src="assets/imgs/undraw_blooming_re_2kc4.svg" alt="imagen positiva">
+                        <img src="assets/imgs/home/undraw_blooming_re_2kc4.svg" alt="imagen positiva">
                     </div>
 
                     <div class="slide" id="slide2">
@@ -73,9 +77,9 @@
                                 <h1>Nossa comunidade!</h1>
                                 <p>Brain community é um espaço interativo onde você pode conversar sobre saúde mental. Oferecemos um ambiente seguro e acolhedor para 
                                     discutir temas importantes, compartilhar experiências e obter apoio. Aqui, a conversa flui naturalmente, promovendo conexões genuínas e aprendizado mútuo.</p>
-                                <button class="a-btn">Ir para comunidade</button>
+                                <a href="comunidade.html" target="_self" class="a-btn">Ir para comunidade</a>
                             </div>
-                            <img src="assets\imgs\undraw_positive_attitude_re_wu7d.svg" alt="imagen positiva">
+                            <img src="assets/imgs/home/undraw_positive_attitude_re_wu7d.svg" alt="imagen positiva">
                     </div>
                     
                     <div class="slide" id="slide3">
@@ -85,14 +89,14 @@
                                 aprofundar seu conhecimento e encontrar orientações práticas. Nossa aba de artigos é atualizada regularmente para manter você informado e engajado.</p>
                             <a class="a-btn" href="artigos.html">Ver todos artigos</a>
                         </div>
-                        <img src="assets/imgs/undraw_my_personal_files_re_3q0p.svg" alt="imagen positiva">
+                        <img src="assets/imgs/home/undraw_my_personal_files_re_3q0p.svg" alt="imagen positiva">
                     </div>
                 </div>
             </div>
             <aside class="search-help">
                 <h2>Ache um profissional próximo!</h2>
-                <button><i class="bi bi-search"></i></button>
-                <input type="text" id="search" placeholder="Digite seu CEP" aria-label="seu cep">
+                <button id="search-btn"><i class="bi bi-search"></i></button>
+                <input type="text" id="search" placeholder="Digite seu CEP" aria-label="seu cep" maxlength="9" minlength="9">
             </aside>
 
             <div class="buttons">
@@ -135,13 +139,151 @@
 
         </section>
 
-        <section class="views">
-
-            <h2>Obrigado por nos escolher <span id="user"></span>!</h2>
-            <h3 id="access-counter">0</h3>
-            <h4>Acessos</h4>
-
+        <section class="voluntary">
+            <div class="voluntary-container">
+                <img src="assets/imgs/home/undraw_online_test_re_kyfx.svg" alt="vonluntary">
+                <div class="vonluntary-content">
+                    <h2>Voluntaria-se</h2>
+                    <p>
+                        Estamos buscando profissionais voluntários interessados em compartilhar seus
+                        conhecimentos sobre saúde mental em nossa plataforma!
+                    </p>
+                    <p>
+                        Ao divulgar artigos e oferecer dicas práticas, você contribuirá para a disseminação de
+                        informações de qualidade, ajudando a promover o bem-estar emocional e a conscientização de um público cada vez maior.
+                        Sua participação será fundamental para fortalecer essa rede de apoio e ampliar o acesso a orientações especializadas.
+                    </p>
+                    <p>Obs: Apenas contas registradas podem se voluntariar</p>
+                    <button class="a-btn" id="voluntary">Voluntariar-se</button>
+                </div>
+            </div>
         </section>
+
+        <section class="feedbacks">
+            <h2>Feedbacks</h2>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="feedback-container">
+                            <div class="feedback-header">
+                                <img src="assets/users/hugo.svg" alt="user">
+                                <h3>Hugo de Lelis</h3>
+                            </div>
+                            <div class="feedback-content">
+                                <p>
+                                    Gostei muito da experiência! A interface é intuitiva e o processo foi 
+                                    rápido e fácil. Parabéns pela atenção aos detalhes e pela usabilidade que vocês proporcionaram!
+                                </p>
+                            </div>
+                            <div class="feedback-footer">
+                                <span><i class="bi bi-star-fill"></i>5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="feedback-container">
+                            <div class="feedback-header">
+                                <img src="assets/users/myllena.svg" alt="user">
+                                <h3>Myllena</h3>
+                            </div>
+                            <div class="feedback-content">
+                                <p>
+                                    A experiência foi excelente! Tudo fluiu bem e foi muito fácil de usar.
+                                    O visual também está muito agradável, parabéns pela qualidade!
+                                </p>
+                            </div>
+                            <div class="feedback-footer">
+                                <span><i class="bi bi-star-fill"></i>4</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="feedback-container">
+                            <div class="feedback-header">
+                                <img src="assets/users/thiago.svg" alt="user">
+                                <h3>Thiago</h3>
+                            </div>
+                            <div class="feedback-content">
+                                <p>
+                                    Processo simples e direto, gostei bastante! Fiquei impressionado com a atenção aos detalhes e a organização da interface.
+                                </p>
+                            </div>
+                            <div class="feedback-footer">
+                                <span><i class="bi bi-star-fill"></i>5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="feedback-container">
+                            <div class="feedback-header">
+                                <img src="assets/users/marcos.svg" alt="user">
+                                <h3>Marcos Paulo</h3>
+                            </div>
+                            <div class="feedback-content">
+                                <p>
+                                    Gostei muito da experiência! A interface é intuitiva e o processo foi 
+                                    rápido e fácil. Parabéns pela atenção aos detalhes e pela usabilidade que vocês proporcionaram!
+                                </p>
+                            </div>
+                            <div class="feedback-footer">
+                                <span><i class="bi bi-star-fill"></i>5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="feedback-container">
+                            <div class="feedback-header">
+                                <img src="assets/users/thalles.svg" alt="user">
+                                <h3>Thalles José</h3>
+                            </div>
+                            <div class="feedback-content">
+                                <p>
+                                    Achei tudo muito intuitivo, a navegação é fluida e não encontrei dificuldades. Muito bem feito, continuem assim!
+                                </p>
+                            </div>
+                            <div class="feedback-footer">
+                                <span><i class="bi bi-star-fill"></i>4.5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="feedback-container">
+                            <div class="feedback-header">
+                                <img src="assets/users/lucas.svg" alt="user">
+                                <h3>Lucas Corrêa</h3>
+                            </div>
+                            <div class="feedback-content">
+                                <p>
+                                    Gostei muito da funcionalidade e do design. 
+                                    A plataforma é prática e bem estruturada, o que facilita muito a usabilidade. Ótimo trabalho!
+                                </p>
+                            </div>
+                            <div class="feedback-footer">
+                                <span><i class="bi bi-star-fill"></i>4</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="feedback-container">
+                            <div class="feedback-header">
+                                <img src="assets/users/caio.svg" alt="user">
+                                <h3>Caio Quintela</h3>
+                            </div>
+                            <div class="feedback-content">
+                                <p>
+                                    Fiquei bem satisfeito com a experiência! 
+                                    A plataforma é super funcional e tudo é fácil de acessar. Vocês estão de parabéns!
+                                </p>
+                            </div>
+                            <div class="feedback-footer">
+                                <span><i class="bi bi-star-fill"></i>4.5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
 
         <section class="artigos-top">
 
@@ -178,8 +320,13 @@
                 </div>
         </section>
 
+        <section class="views">
+            <h2>Obrigado por nos escolher <span id="user"></span>!</h2>
+            <h3 id="access-counter">0</h3>
+            <h4>Acessos</h4>
+        </section>
+
         <section class="termos" id="termos">
-            <h2>Nossos termos de uso!</h2>
             <button type="button" class="termos-servico" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Ver termos
             </button>
@@ -240,17 +387,19 @@
                         <div class="column-grid d-flex flex-wrap">
                             <div class="col-grid">
                                 <ul class="footer-ul-style">
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">Profissionais</a></li>
-                                    <li><a href="#">Artigos</a></li>
-                                    <li><a href="#">Biblioteca</a></li>
-                                    <li><a href="#">Dicas</a></li>
-                                    <li><a href="#">Ansiedade</a></li>
-                                    <li><a href="#">Cyber-Bullying</a></li>
-                                    <li><a href="#">Dependência Digital</a></li>
-                                    <li><a href="#">Depressão</a></li>
-                                    <li><a href="#">Pânico</a></li>
-                                    <li><a href="#">Positividade tóxica</a></li>
+                                    <li><a href="artigos.html?artigo=ansiedade">Ansiedade</a></li>
+                                    <li><a href="artigos.html">Artigos</a></li>
+                                    <li><a href="biblioteca.html">Biblioteca</a></li>
+                                    <li><a href="artigos.html?artigo=cyber-bullying">Cyber-Bullying</a></li>
+                                    <li><a href="artigos.html?artigo=dependencia-digital">Dependência Digital</a></li>
+                                    <li><a href="artigos.html?artigo=depressao">Depressão</a></li>
+                                    <li><a href="dicas.html">Dicas</a></li>
+                                    <li><a href="comunidade.html">Comunidade</a></li>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="profissionais.html">Profissionais</a></li>
+                                    <li><a href="artigos.html?artigo=panico">Pânico</a></li>
+                                    <li><a href="artigos.html?artigo=positividade-toxica">Positividade Tóxica</a></li>
+                                    
                                 </ul>
                             </div>
                         </div>
@@ -260,13 +409,13 @@
                     <div class=" flex-column col-sm-12 col-md-12 col-lg-2 ">
                         <details class="footer-details mt-3">
                             <summary><h3>Contato</h3></summary>
-                                <ul class="footer-ul-style">
+                                <ul class="footer-ul-style m0">
                                     <li><a href="">Fale conosco</a></li>
                                     <li><a href="">Chat</a></li>
                                     <li><a href="">Email</a></li>
                                 </ul>
                         </details>
-                        <div class="social-icons-footer">
+                        <div class="social-icons-footer m0">
                             <a href="https://github.com/Hugodelelis" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
                                 <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
                             </svg></a>
@@ -278,5 +427,28 @@
                 </div>
             </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <script>
+    var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            initialSlide: 3,
+            slideToClickedSlide: true,
+            coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: false,
+        },
+        pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+    </script>
 </body>
 </html>
