@@ -272,6 +272,14 @@ form{
 }
 .post-top-content{
     width: 60%;
+    
+}
+
+.post-top-content h2{
+    white-space: nowrap;        /* Impede que o texto quebre para outra linha */
+    overflow: hidden;          /* Oculta o texto que ultrapassa os limites do elemento */
+    text-overflow: ellipsis;
+    max-width: 180px;
 }
 .post-interaction{
     width: 40%;
