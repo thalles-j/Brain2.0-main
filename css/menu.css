@@ -50,7 +50,7 @@ header {
 
 .user-menu {
     font-size: 17px;
-    margin-right: 5%;
+    padding: 6px;
 }
 
 header h1 {
@@ -124,4 +124,9 @@ header h1 .bi.bi-slack {
     header {
         padding: 0.5em;
     }
+    .user-menu {
+        font-size: 13px;
+        padding: 1px;
+    }
+    
 }
